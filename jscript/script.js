@@ -69,6 +69,7 @@ document.querySelector('button').addEventListener('click', function (e) {
   // ripulisco i campi del form
   kmTotField.value = '';
   ageField.value = '';
+  fullNameField.value = '';
 
   // mostro i dati recuperati
   console.log('kmTot', kmTot);
