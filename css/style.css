@@ -15,7 +15,8 @@ main {
 }
 
 form {
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   padding: 0 20px;
   max-width: 650px;
 }
@@ -25,9 +26,9 @@ label {
   margin-bottom: 5px;
 }
 
-table {
-  margin: 50px 0;
-}
+/* table {
+  margin: ;
+} */
 
 /* header {
   position: fixed;
