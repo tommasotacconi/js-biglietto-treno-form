@@ -106,7 +106,7 @@ document.querySelector('button').addEventListener('click', function (e) {
   // 14.
   document.querySelector('td.td-ticket-price').innerText = ticketPrice;
   document.querySelector('td.td-discount').innerText = discountType;
-  document.querySelector('td.td-full-name').innerText = fullName;
+  document.querySelector('td.td-full-name').innerHTML = '<b>' + fullName + '</b>';
   if (ticketPrice && discountType && fullName) {
     document.querySelector('table').classList.remove('table-light');
     document.querySelector('table').classList.add('table-success');

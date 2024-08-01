@@ -1,13 +1,13 @@
 /* Css reset */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 /* Generics */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
 }
 
 main {
@@ -24,6 +24,13 @@ form {
 label {
   margin-top: 20px;
   margin-bottom: 5px;
+}
+
+table {
+  td {
+    height: 80px;
+    line-height: 80px
+  }
 }
 
 /* table {
