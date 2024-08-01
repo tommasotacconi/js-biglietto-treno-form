@@ -1,0 +1,263 @@
+/* Utilities */
+:root {
+    --pd-sm: 10px;
+    --pd-m: 15px;
+    --pd-lg: 20px;
+    --nav-pd: 5px;
+    --sec-pd-sm: 25px;
+    --sec-pd-lg: 40px;
+    --sec-pd-xl: 50px;
+    --sec-pd-xxl: 100px;
+    --sec-pd-xxxl: 130px;
+    --pd-sm: 10px;
+    --pd-md: 20px;
+    --pd-lg: 30px;
+    --pd-xl: 50px;
+    --mh-sm: 50px;
+    --mh-lg: 250px;
+    --mh-xl: 300px;
+    --mh-xxl: 400px;
+    --mh-xxxl: 700px;
+}
+
+.lheight-m {
+    line-height: 30px
+}
+
+/* alignment */
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+/* type of container */
+.container-lg {
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: var(--mh-xl);
+    /* border: 3px dashed burlywood; */
+}
+
+.container-xl {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: var(--mh-xxl)
+}
+
+/* type of border */
+.dashed-border{
+    border: 3px dashed orange
+}
+
+.dashed-border-alternative {
+    border: 3px dashed hotpink;
+}
+
+.separator-div {
+    border: 1px solid #d3d9df;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* type of button */
+.btn {
+    font-size: 16px;
+    padding: 7px 12px;
+    border: 0;
+}
+
+.btn-mouse-on:hover {
+    background-color: #3b7cff;
+    border: 2px solid whitesmoke;
+    padding: 5.4px 10.4px;
+    cursor: pointer;
+}
+
+.btn-big {
+    font-size: 20px;
+    padding: 16px 22px;
+    border-radius: 26px;
+    margin: 5px 20px;
+    border: 0;
+}
+
+.btn-big-mouse-on:hover {
+    background-color: #eaeaea;
+    border: 1px solid #6b84de;
+    padding: 15px 21px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* anchor style */
+.a-blue {
+    color: #2600ff;
+}
+
+/* assegna il bordo ai figli diretti */
+.child-thin-border > * {
+    border: 1px solid lightgray;
+}
+
+/* flex configuration */
+.d-flex {
+    display: flex;
+}
+
+/* assegna display:flex ai figli diretti */
+.childs-d-flex- > * {
+    display: flex;
+}
+
+.flex-row-align-center {
+    display: flex;
+    align-items: center;
+    /* gap: var(--space); */
+}
+
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: var(--space); */
+}
+
+/* centra il contenuto dei propri figli */
+.child-flex-row-center > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.childs-flex-row-center > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.childs-flex-row-space-between > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-row-space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-item {
+    flex-basis: 200px;
+}
+
+.gap-sm {
+    gap: 15px;
+}
+
+.gap-m {
+    gap: 30px;
+}
+
+/*  */
+
+/* hover effect */
+.childs-border-onhover li:hover a:not(#logo-anchor) {
+    border-bottom: 1.6px solid black;
+}
+
+.bdcolor-bianco {
+    background-color: #fff;
+}
+
+.bdcolor-bianco-fumo {
+    background-color: whitesmoke;
+}
+
+.bdcolor-cielo {
+    background-color: #a4c8f7;
+}
+
+.bdcolor-blu-cadetto {
+    background-color: cadetblue;
+}
+
+.bdcolor-blu-tenue {
+    background-color: cornflowerblue ;
+}
+
+.bdcolor-cioccolato {
+    background-color: chocolate
+}
+
+.bdcolor-black {
+    background-color: black;
+}
+
+.bdcolor-blu-ardesia {
+    background-color: slateblue;
+}
+
+.bdcolor-argento{
+    background-color: silver;
+}
+
+.bdcolor-pesca {
+    background-color: peachpuff;
+}
+
+.bdcolor-greenyellow {
+    background-color: greenyellow;
+}
+
+.bdcolor-red {
+    background-color: red;
+}
+
+.bdcolor-dark-red {
+    background-color: #d30000;
+}
+
+.bdcolor-red-brown {
+    background-color: #73231f;
+}
+
+.bdcolor-marrone {
+    background-color: brown;
+}
+
+.bdcolor-grigio-chiaro {
+    background-color: #efefef;
+}
+
+.bdcolor-deep-blue { 
+    background-color: darkblue
+}
+
+.bdcolor-giallo {
+    background-color: #fff200;
+}
+
