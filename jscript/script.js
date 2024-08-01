@@ -15,14 +15,14 @@ age
 8. calcola il prezzo del biglietto ticketPrice moltiplicando kmTot
 per costKm 
 9. verifica se l'età è minore di 18, qualora lo sia calcola lo sconto
-come ticketPrice * discountU18, lo assegna a const discountAmount e
+come ticketPrice * discountU18, lo assegna a var discountAmount e
 lo sottrae a ticketPrice; sovrascrive poi con questo ultimo risultato
 il valore di ticketPrice
 10. verifica se l'età è maggiore di 65, qualora lo sia calcola lo sconto
-come ticketPrice * discountO65, lo assegna a const discountAmount e
+come ticketPrice * discountO65, lo assegna a var discountAmount e
 lo sottrae a ticketPrice; sovrascrive poi con questo ultimo risultato
 il valore di ticketPrice
-10. arrotonda a due cifre decimali la const ticketPrice
+10. arrotonda a due cifre decimali la variabile ticketPrice
 11. stampa in pagina il prezzo di ticketPrice
 12. verifica se esiste una delle due tipologie di sconto, quindi
 stampa il relativo sconto
@@ -67,6 +67,26 @@ document.querySelector('button').addEventListener('click', function (e) {
   // mostro i dati recuperati
   console.log('kmTot', kmTot);
   console.log('age', age);
+
+  // Fase di elaborazione dati
+  // .8
+  let ticketPrice = kmTot * costKm;
+  console.log('ticketPrice', ticketPrice);
+  
+  let discountType = 'Biglietto base'
+  let discountAmount;
+  // 9.
+  if (age < 18) {  
+    discountAmount = ticketPrice * discountU18;
+    ticketPrice -= discountAmount;
+    discountType = 'Biglietto minorenni';
+  }
+  // 10.
+  else if (age > 65) {
+    discountAmount = ticketPrice * discountO65;
+    ticketPrice -= discountAmount;
+    discountType = 'Biglietto sopra 65';
+  }
 });
 
 
