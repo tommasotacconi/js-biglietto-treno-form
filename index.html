@@ -20,13 +20,39 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <p class="intro">
+    <main>
+      <!-- form con dati di km tot. e età -->
       Per cortesia inserisci i dati che ti verranno richiesti, non appena avrai finito potrai vedere qua il costo del tuo biglietto e l'eventuale sconto applicato. Viene applicato uno sconto del 20% ai minorenni ed uno del 40% alle persone con più di 65 anni.
-    </p>
-    <p class="result"></p>
-  </body>
-  <!-- javascript connection -->
-  <script src="jscript/script.js" defer></script>
-</html>
+      <form>
+        <label for="kmTot">
+          Km tot da percorrere        
+          <input id="kmTot" type="number">
+        </label>
+        <label for="age">
+          Età
+          <input id="age" type="number" min="0" max="120">
+        </label>
+        
+      </form>
+      
+      <!-- presentazione dati in un biglietto -->
+      <table>
+        <tr>
+          <th>Nome passeggero</th>
+          <th>Offerta</th>
+          <th>Codice CP</th>
+          <th>Costo biglietto</th>
+        </tr>
+        <tr>
+          <td class="td-full-name">segnaposto</td>
+          <td class="td-discount">segnaposto</td>
+          <td>segnaposto</td>
+          <td class="td-ticket-cost">segnaposto</td>
+        </tr>
+      </table>
+    </main>
 
-<!-- commit finale -->
+    <!-- javascript connection -->
+    <script src="jscript/script.js" defer></script>
+  </body>
+</html>
