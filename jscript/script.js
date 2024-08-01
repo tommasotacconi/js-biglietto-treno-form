@@ -22,10 +22,10 @@ il valore di ticketPrice
 come ticketPrice * discountO65, lo assegna a var discountAmount e
 lo sottrae a ticketPrice; sovrascrive poi con questo ultimo risultato
 il valore di ticketPrice
-10. arrotonda a due cifre decimali la variabile ticketPrice
-11. stampa in pagina il prezzo di ticketPrice
-12. verifica se esiste una delle due tipologie di sconto, quindi
-stampa il relativo sconto
+11. arrotonda a due cifre decimali la variabile ticketPrice
+12. stampa in console o in pagina il prezzo di ticketPrice
+13. verifica se esiste una delle due tipologie di sconto, quindi
+stampa in console o in pagina il relativo sconto
 */
 
 // Fase preparatoria
