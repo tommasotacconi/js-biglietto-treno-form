@@ -87,6 +87,14 @@ document.querySelector('button').addEventListener('click', function (e) {
     ticketPrice -= discountAmount;
     discountType = 'Biglietto sopra 65';
   }
+
+  // Fase di restituzione dati
+  // 11.
+  ticketPrice.toFixed(2);
+  console.log('ticketPrice', ticketPrice)
+  // 12 e 13.
+  if (discountAmount) console.log('discountAmount', discountAmount, 'discountType', discountType);
+
 });
 
 
