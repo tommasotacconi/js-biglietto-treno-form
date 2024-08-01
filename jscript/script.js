@@ -11,8 +11,8 @@ di offerta applicata e nome passeggero
 kmTot
 6. recupera dall'utente con l'input #age l'età e la inserisce in const
 age
-7. recupera il nome con input #fullName e lo inserisce in const fullName
-8.(opzionale) calcola il prezzo del biglietto ticketPrice moltiplicando kmTot
+7.(opzionale) recupera il nome con input #fullName e lo inserisce in const fullName
+8. calcola il prezzo del biglietto ticketPrice moltiplicando kmTot
 per costKm 
 9. verifica se l'età è minore di 18, qualora lo sia calcola lo sconto
 come ticketPrice * discountU18, lo assegna a const discountAmount e
