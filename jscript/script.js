@@ -11,7 +11,8 @@ di offerta applicata e nome passeggero
 kmTot
 6. recupera dall'utente con l'input #age l'età e la inserisce in const
 age
-7.(opzionale) recupera il nome con input #fullName e lo inserisce in const fullName
+7.(opzionale) recupera il nome con input #fullName e lo inserisce in var
+fullName
 8. calcola il prezzo del biglietto ticketPrice moltiplicando kmTot
 per costKm 
 9. verifica se l'età è minore di 18, qualora lo sia calcola lo sconto
@@ -26,6 +27,7 @@ il valore di ticketPrice
 12. stampa in console o in pagina il prezzo di ticketPrice
 13. verifica se esiste una delle due tipologie di sconto, quindi
 stampa in console o in pagina il relativo sconto
+14. assegno ai campi del biglietto i risultati stampati in console
 */
 
 // Fase preparatoria
@@ -49,9 +51,10 @@ console.log('discountO65', discountO65);
  di importare nelle variabili kmTot e age i valori (attributo value) dentro
  ai due relativi campi del form
  */
-let kmTot; let age;
+let kmTot; let age; let fullName;
 const kmTotField = document.getElementById('kmTot');
 const ageField = document.getElementById('age');
+const fullNameField = document.getElementById('fullName');
 
 document.querySelector('button').addEventListener('click', function (e) {
   e.preventDefault();
@@ -60,6 +63,9 @@ document.querySelector('button').addEventListener('click', function (e) {
   kmTot = kmTotField.value.trim();
   age = ageField.value.trim();
 
+  // 7.
+  fullName = fullNameField.value.trim();
+
   // ripulisco i campi del form
   kmTotField.value = '';
   ageField.value = '';
@@ -67,9 +73,10 @@ document.querySelector('button').addEventListener('click', function (e) {
   // mostro i dati recuperati
   console.log('kmTot', kmTot);
   console.log('age', age);
+  console.log('fullName', fullName)
 
   // Fase di elaborazione dati
-  // .8
+  // 8.
   let ticketPrice = kmTot * costKm;
   console.log('ticketPrice', ticketPrice);
   
@@ -90,11 +97,19 @@ document.querySelector('button').addEventListener('click', function (e) {
 
   // Fase di restituzione dati
   // 11.
-  ticketPrice.toFixed(2);
+  ticketPrice = ticketPrice.toFixed(2);
   console.log('ticketPrice', ticketPrice)
   // 12 e 13.
   if (discountAmount) console.log('discountAmount', discountAmount, 'discountType', discountType);
 
+  // 14.
+  document.querySelector('td.td-ticket-price').innerText = ticketPrice;
+  document.querySelector('td.td-discount').innerText = discountType;
+  document.querySelector('td.td-full-name').innerText = fullName;
+  if (ticketPrice && discountType && fullName) {
+    document.querySelector('table').classList.remove('table-light');
+    document.querySelector('table').classList.add('table-success');
+  }
 });
 
 

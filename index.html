@@ -20,37 +20,46 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <main>
+    <main class="container-md">
       <!-- form con dati di km tot. e età -->
       Per cortesia inserisci i dati che ti verranno richiesti, non appena avrai finito potrai vedere qua il costo del tuo biglietto e l'eventuale sconto applicato. Viene applicato uno sconto del 20% ai minorenni ed uno del 40% alle persone con più di 65 anni.
       <form>
-        <label for="kmTot">
-          Km tot da percorrere        
-          <input id="kmTot" type="number" value="">
-        </label>
-        <label for="age">
-          Età
-          <input id="age" type="number" min="0" max="120" value="">
-        </label>
-        
-        <button>Invia</button>
+        <div class="card">
+          <div class="row">
+            <div class="col-6">            
+              <label for="fullName" class="d-flex justify-content-between">Nome e Cognome</label>        
+              <input id="fullName" type="text" value="">            
+            </div>
+            <div class="col-6">          
+              <label for="kmTot">Km tot da percorrere</label>                  
+              <input id="kmTot" type="number" value=""><br>       
+              <label for="age">Età</label>          
+              <input id="age" type="number" min="0" max="120" value="">
+            </div>
+            <div class="col">
+              <button class="btn btn-primary">Invia</button>
+            </div>
+          </div>                  
+        </div>
       </form>
       
       <!-- presentazione dati in un biglietto -->
-      <table>
-        <tr>
-          <th>Nome passeggero</th>
-          <th>Offerta</th>
-          <th>Codice CP</th>
-          <th>Costo biglietto</th>
-        </tr>
-        <tr>
-          <td class="td-full-name">segnaposto</td>
-          <td class="td-discount">segnaposto</td>
-          <td>segnaposto</td>
-          <td class="td-ticket-cost">segnaposto</td>
-        </tr>
-      </table>
+      <div class="table-box">        
+        <table class="table table-light table-striped ">
+          <tr>
+            <th>NOME PASSEGGERO</th>
+            <th>Offerta</th>
+            <th>Codice CP</th>
+            <th>Costo biglietto</th>
+          </tr>
+          <tr>
+            <td class="td-full-name">segnaposto</td>
+            <td class="td-discount">segnaposto</td>
+            <td>segnaposto</td>
+            <td class="td-ticket-price">segnaposto</td>
+          </tr>
+        </table>
+      </div>
     </main>
 
     <!-- javascript connection -->

@@ -17,14 +17,16 @@ main {
 form {
   margin-top: 50px;
   padding: 0 20px;
+  max-width: 650px;
+}
+
+label {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 table {
-  width: 600px;
-  height: 100px;
-  margin: 50px 20px 0;
-  border-spacing: 20px;
-  
+  margin: 50px 0;
 }
 
 /* header {
@@ -78,5 +80,31 @@ footer {
 } */
 
 /* Utilities */
+#fullName {
+  flex-basis: 50%;
+}
+
+#kmTot {
+  width: 100px;
+}
+
+#age {
+  width: 60px;
+}
+
+.card {
+  padding: 20px;
+}
+
+.btn {
+  margin-top: 60px;
+}
+
+.table-box {
+  max-width: 650px;
+  height: 100px;
+}
+
+
 
 
