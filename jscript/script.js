@@ -56,7 +56,7 @@ const kmTotField = document.getElementById('kmTot');
 const ageField = document.getElementById('age');
 const fullNameField = document.getElementById('fullName');
 
-document.querySelector('button').addEventListener('click', function (e) {
+document.querySelector('button.btn-success').addEventListener('click', function (e) {
   e.preventDefault();
 
   // 5. e .6
