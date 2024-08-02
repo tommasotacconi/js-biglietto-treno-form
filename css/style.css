@@ -22,8 +22,8 @@ form {
 }
 
 label {
-  margin-top: 20px;
   margin-bottom: 5px;
+  margin-right: 10px;
 }
 
 table.table {
@@ -118,6 +118,7 @@ footer {
 
 #age {
   width: 60px;
+  margin-top: 30px;
 }
 
 form .card {
