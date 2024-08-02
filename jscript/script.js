@@ -60,8 +60,8 @@ document.querySelector('button').addEventListener('click', function (e) {
   e.preventDefault();
 
   // 5. e .6
-  kmTot = kmTotField.value.trim();
-  age = ageField.value.trim();
+  kmTot = parseInt(kmTotField.value.trim());
+  age = parseInt(ageField.value.trim());
 
   // 7.
   fullName = fullNameField.value.trim();
@@ -98,8 +98,12 @@ document.querySelector('button').addEventListener('click', function (e) {
 
   // Fase di restituzione dati
   // 11.
-  ticketPrice = ticketPrice.toFixed(2);
-  console.log('ticketPrice', ticketPrice)
+  if (ticketPrice = NaN) {    
+    ticketPrice = ticketPrice.toFixed(2);
+    console.log('ticketPrice', ticketPrice);
+  } else {
+    alert('No distance inserted');
+  }
   // 12 e 13.
   if (discountAmount) console.log('discountAmount', discountAmount, 'discountType', discountType);
 
