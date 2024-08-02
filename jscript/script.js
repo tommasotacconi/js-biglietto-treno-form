@@ -56,29 +56,29 @@ const kmTotField = document.getElementById('kmTot');
 const ageField = document.getElementById('age');
 const fullNameField = document.getElementById('fullName');
 
+let ticketPrice;
+
 document.querySelector('button.btn-success').addEventListener('click', function (e) {
   e.preventDefault();
 
   // 5. e .6
-  kmTot = parseInt(kmTotField.value.trim());
-  age = parseInt(ageField.value.trim());
+/*   if è stato aggiunto per non sovrascrivere la variabili qualora si volesse
+  modificare un solo campo. */
+  if (kmTotField.value) kmTot = parseInt(kmTotField.value.trim());
+  if (ageField.value) age = parseInt(ageField.value.trim());
 
   // 7.
-  fullName = fullNameField.value.trim();
+  if (fullNameField.value) fullName = fullNameField.value.trim();
 
-  // ripulisco i campi del form
-  kmTotField.value = '';
-  ageField.value = '';
-  fullNameField.value = '';
-
+  
   // mostro i dati recuperati
   console.log('kmTot', kmTot);
   console.log('age', age);
   console.log('fullName', fullName)
-
+  
   // Fase di elaborazione dati
   // 8.
-  let ticketPrice = kmTot * costKm;
+  ticketPrice = kmTot * costKm;
   console.log('ticketPrice', ticketPrice);
   
   let discountType = 'Biglietto base'
@@ -95,25 +95,31 @@ document.querySelector('button.btn-success').addEventListener('click', function 
     ticketPrice -= discountAmount;
     discountType = 'Biglietto sopra 65';
   }
-
+  
   // Fase di restituzione dati
-  // 11.
-  if (ticketPrice = NaN) {    
-    ticketPrice = ticketPrice.toFixed(2);
-    console.log('ticketPrice', ticketPrice);
+  // 11. e validazione
+  const inTicketPrice = document.querySelector('td.td-ticket-price')
+  if (ticketPrice) {
+    ticketPriceRounded = ticketPrice.toFixed(2);
+    console.log('ticketPrice', ticketPriceRounded);
+    inTicketPrice.innerText = ticketPriceRounded;
   } else {
     alert('No distance inserted');
+    return;
   }
   // 12 e 13.
   if (discountAmount) console.log('discountAmount', discountAmount, 'discountType', discountType);
-
+  
   // 14.
-  document.querySelector('td.td-ticket-price').innerText = ticketPrice;
   document.querySelector('td.td-discount').innerText = discountType;
   document.querySelector('td.td-full-name').innerHTML = '<b>' + fullName + '</b>';
-  if (ticketPrice && discountType && fullName) {
+  if (fullName) {
     document.querySelector('table').classList.remove('table-light');
     document.querySelector('table').classList.add('table-success');
+    // ripulisco i campi del form
+    kmTotField.value = '';
+    ageField.value = '';
+    fullNameField.value = '';
   }
 });
 
